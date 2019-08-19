@@ -1,0 +1,112 @@
+
+d8_cache.cache_controller_cacheCode:
+  path: '/d8_cache/cacheCode'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheCode'
+    _title: 'cacheCode'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheMaxAge:
+  path: '/d8_cache/max-age'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheMaxAge'
+    _title: 'cacheMaxAge'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheMaxAgeCode:
+  path: '/d8_cache/max-age-code'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheMaxAgeCode'
+    _title: 'cacheMaxAgeCode'
+  requirements:
+    _permission: 'access content'
+
+
+d8_cache.cache_controller_internalNoCache:
+  path: '/d8_cache/internalNoCache'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::internalNoCache'
+    _title: 'Internal No Cache'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_internalNoCacheRoute:
+  path: '/d8_cache/internalNoCacheRoute'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::internalNoCacheRoute'
+    _title: 'Internal No Cache Route'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: TRUE # Stop cache the whole page
+
+
+d8_cache.cache_controller_cacheMaxAgePermanent:
+  path: '/d8_cache/cacheMaxAgePermanent'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheMaxAgePermanent'
+    _title: 'cacheMaxAge Permanent'
+  requirements:
+    _permission: 'access content'
+
+
+d8_cache.cache_controller_cacheContextsByUrl:
+  path: '/d8_cache/cacheContextsByUrl'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheContextsByUrl'
+    _title: 'cacheMaxAge Context'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheContextsByUrlParam:
+  path: '/d8_cache/cacheContextsByUrlParam'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheContextsByUrlParam'
+    _title: 'cacheMaxAge Context Params'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheTagsNode:
+  path: '/d8_cache/cacheTagsNode'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheTagsNode'
+    _title: 'cache Tags Node 1'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheTags:
+  path: '/d8_cache/cacheTags'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheTags'
+    _title: 'cacheTags'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheNoKeys:
+  path: '/d8_cache/cacheNoKeys'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheNoKeys'
+    _title: 'cache No Keys'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheKeys:
+  path: '/d8_cache/cacheKeys'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheKeys'
+    _title: 'cache with Keys'
+  requirements:
+    _permission: 'access content'
+
+d8_cache.cache_controller_cacheTreeParent:
+  path: '/d8_cache/cacheTreeParent'
+  defaults:
+    _controller: '\Drupal\d8_cache\Controller\CacheController::cacheTreeParent'
+    _title: 'cacheTreeParent'
+  requirements:
+    _permission: 'access content'
+
+
+

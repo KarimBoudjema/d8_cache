@@ -1,0 +1,5 @@
+name: 'Test Cache'
+type: module
+description: 'Testing cache'
+core: 8.x
+package: 'Custom'

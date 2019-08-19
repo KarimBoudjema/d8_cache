@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * d8_cache.module
+ */
+
+// For hook_views_pre_views.
+use Drupal\views\ViewExecutable;
+
+// For hook_node_save.
+use Drupal\Core\Cache\Cache;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_node_presave().
+ *
+ * Invalid cache tags for node lists.
+ */
+function d8_cache_node_presave(NodeInterface $node) {
+  $cache_tag = 'node:type:' . $node->getType();
+  Cache::invalidateTags([$cache_tag]);
+}
+
+/**
+ * Implement hook_views_pre_view().
+ *
+ * Add the time in the header of our views.
+ */
+function d8_cache_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+
+  $contenu = "Il est: " . date('H:i:s');
+
+  if ($view->id() == 'test_pages' && $display_id === 'page_1') {
+    $options = [
+      'id' => 'area_text_custom',
+      'table' => 'views',
+      'field' => 'area_text_custom',
+      'relationship' => 'none',
+      'group_type' => 'none',
+      'admin_label' => '',
+      'empty' => TRUE,
+      'tokenize' => FALSE,
+      'content' => $contenu,
+      'plugin_id' => 'text_custom',
+    ];
+    $view->setHandler('page_1', 'header', 'area_text_custom', $options);
+  }
+
+  if ($view->id() == 'test_articles_block' && $display_id === 'block_1') {
+    $options = [
+      'id' => 'area_text_custom',
+      'table' => 'views',
+      'field' => 'area_text_custom',
+      'relationship' => 'none',
+      'group_type' => 'none',
+      'admin_label' => '',
+      'empty' => TRUE,
+      'tokenize' => FALSE,
+      'content' => $contenu,
+      'plugin_id' => 'text_custom',
+    ];
+    $view->setHandler('block_1', 'header', 'area_text_custom', $options);
+  }
+}
